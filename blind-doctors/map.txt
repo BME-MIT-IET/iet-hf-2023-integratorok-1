@@ -1,0 +1,26 @@
+create_field e1 1
+create_field e2 1
+create_field l1 2 1
+create_field l2 2 2
+create_field l3 2 3
+create_field bl1 5 4
+create_field sh1 3 1
+create_field sh2 3 4
+create_field st1 4
+create_field st2 4
+pair e1 l1
+pair e1 l2
+pair e1 sh1
+pair l1 sh1
+pair l1 st1
+pair l2 st2
+pair l2 sh1
+pair sh1 st1
+pair sh1 sh2
+pair sh1 st2
+pair st1 l3
+pair st1 sh2
+pair st2 sh2
+pair l3 sh2
+pair l3 e2
+pair bl1 e2

@@ -1,0 +1,6 @@
+create_field e1 1
+create_field e2 1
+create_field bl1 5 1
+pair e1 e2
+pair e1 bl1
+pair e2 bl1

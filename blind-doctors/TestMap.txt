@@ -1,0 +1,55 @@
+create_field e1 1
+create_field e2 1
+create_field e3 1
+create_field e4 1
+create_field e5 1
+create_field e6 1
+create_field l1 2 1
+create_field l2 2 2
+create_field l3 2 3
+create_field l4 2 4
+create_field bl1 5 4
+create_field sh1 3 1
+create_field sh2 3 2
+create_field sh3 3 3
+create_field sh4 3 4
+create_field st1 4
+create_field st2 4
+create_field st3 4
+create_field st4 4
+pair e1 l1
+pair e1 st1
+pair e1 sh1
+pair e1 e2
+pair e2 sh1
+pair e2 bl1
+pair e2 sh2
+pair e3 l2
+pair e3 st3
+pair e3 sh3
+pair e4 st1
+pair e4 sh1
+pair e4 e5
+pair e4 st4
+pair e4 l4
+pair e5 sh1
+pair e5 bl1
+pair e5 st2
+pair e5 st4
+pair e6 st2
+pair e6 sh4
+pair e6 l3
+pair l1 st1
+pair l2 st3
+pair l3 sh4
+pair l4 st4
+pair sh1 st1
+pair sh1 bl1
+pair sh2 st3
+pair sh2 bl1
+pair sh3 sh4
+pair sh3 st2
+pair sh3 bl1
+pair sh3 st3
+pair sh4 st2
+pair st2 bl1

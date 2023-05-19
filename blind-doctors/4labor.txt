@@ -1,0 +1,8 @@
+create_field l1 2 1
+create_field l2 2 2
+create_field l3 2 3
+create_field l4 2 4
+pair l1 l2
+pair l2 l3
+pair l3 l4
+pair l4 l1
