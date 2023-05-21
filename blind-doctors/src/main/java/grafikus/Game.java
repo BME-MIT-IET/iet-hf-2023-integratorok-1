@@ -59,6 +59,8 @@ public class Game {
 
     private static ArrayList<Field> fieldsList = new ArrayList<>();
 
+    private static final Random random = new Random();
+
     //true ha vege a jateknak
     private static boolean endGame = false;
 
@@ -134,20 +136,18 @@ public class Game {
     /**
      * A megadott filet beolvassa soronket es feldolgozza a sorokat a command fv-el
      */
-    static void readTestFile(int index){
-        BufferedReader reader;
-        try {
-            reader = new BufferedReader(new FileReader(testCases.get(index)));
+    static void readTestFile(int index) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(testCases.get(index)))) {
             String line = reader.readLine();
             while (line != null && !endGame) {
                 Command(line);
                 line = reader.readLine();
             }
-            reader.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
 
     /**
      * nagy switch case a kulonbozo parancsoknak
@@ -353,16 +353,13 @@ public class Game {
     }
 
 
-    public static void LoadMap(String input){
-        BufferedReader reader;
-        try {
-            reader = new BufferedReader(new FileReader(input));
+    public static void LoadMap(String input) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(input))) {
             String line = reader.readLine();
             while (line != null && !endGame) {
                 Command(line);
                 line = reader.readLine();
             }
-            reader.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -373,13 +370,12 @@ public class Game {
      * @param players playerek száma
      */
     public static void AddPlayers(int players){
-        Random rnd = new Random();
         Collection<Field> fieldValues = fields.values();
         ArrayList<Field> notUsed = new ArrayList<>(fieldValues);
         ArrayList<Field> allfields = new ArrayList<>(fieldValues);
         for(int i = 0; i < players; i++){
             if(notUsed.size() > 0){
-                int r = rnd.nextInt(notUsed.size());
+                int r = random.nextInt(notUsed.size());
                 Doctor d = new Doctor(Integer.toString(i));
                 doctors.put(d.GetID(), d);
                 doctorsList.add(d);
@@ -388,7 +384,7 @@ public class Game {
 
 
             }else{
-                int r = rnd.nextInt(fields.size());
+                int r = random.nextInt(fields.size());
                 Doctor d = new Doctor(Integer.toString(i));
                 doctors.put(d.GetID(), d);
                 doctorsList.add(d);

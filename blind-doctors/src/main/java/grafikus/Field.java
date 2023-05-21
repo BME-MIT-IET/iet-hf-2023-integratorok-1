@@ -14,6 +14,8 @@ public abstract class Field {
 
     protected ArrayList<Doctor> doctors; // A mezőn lévő doktorok listája.
 
+    protected static final Random random = new Random(); //Random példány újrahasználathoz
+
 
 
     /**
@@ -61,8 +63,7 @@ public abstract class Field {
      * @return - Random szomszéd
      */
     public Field GetRandomNeighbor(){
-        Random r = new Random();
-        int index = r.nextInt(neighbors.size());
+        int index = random.nextInt(neighbors.size());
         return neighbors.get(index);
     }
 
