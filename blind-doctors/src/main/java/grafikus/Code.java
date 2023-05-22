@@ -61,7 +61,6 @@ public class Code {
                 this.cost = new Material(cost);
                 break;
             default:
-                break;
         }
     }
 
