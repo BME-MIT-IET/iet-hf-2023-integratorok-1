@@ -417,22 +417,26 @@ public class GamePanel extends JPanel{
 
             //If a string was returned, say so.
             if ((s != null) && (s.length() > 0)) {
-
-                String[] ss  = s.split(":");
-
+                String[] ss = s.split(":");
                 s = ss[0];
 
                 Code c = null;
                 for (Code code : player.GetCodes()) {
-                    if (code.toString().equals(s))
+                    if (code.toString().equals(s)) {
                         c = code;
+                        break;
+                    }
                 }
 
-                if(c.GetCost() > player.GetMaterial().GetAmount()){
-                    JOptionPane.showMessageDialog(b.getParent().getParent(),
-                            "You dont, have enough material");
+                if (c == null) {
                     return;
                 }
+
+                if (c.GetCost() > player.GetMaterial().GetAmount()) {
+                    JOptionPane.showMessageDialog(b.getParent().getParent(), "You don't have enough material");
+                    return;
+                }
+
                 player.AgensOnSelf(c);
                 Main.UpdateView(needStepButtons);
             }
@@ -489,6 +493,10 @@ public class GamePanel extends JPanel{
                     }
                 }
 
+                if(c == null){
+                    return;
+                }
+
                 if(c.GetCost() > player.GetMaterial().GetAmount()){
                     JOptionPane.showMessageDialog(b.getParent().getParent(),
                             "You dont, have enough material!");
@@ -497,8 +505,6 @@ public class GamePanel extends JPanel{
 
                 player.Attack(chosenDoctorButton.GetDoctor(), c);
                 Main.UpdateView(needStepButtons);
-                return;
-
             }
         }
     }
