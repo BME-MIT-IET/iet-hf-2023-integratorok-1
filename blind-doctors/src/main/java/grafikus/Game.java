@@ -442,8 +442,10 @@ public class Game {
                 break;
             case "5":
                 a = new BearAgens();
+                break;
             default:
                 a = new Protection(0);
+                break;
         }
         a.HandleEffect(doctors.get(params[1]));
     }
@@ -469,7 +471,6 @@ public class Game {
                 break;
             default:
                 c = new Code();
-                break;
         }
 
         doctors.get(params[1]).Attack(doctors.get(params[2]), c);
