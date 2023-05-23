@@ -205,7 +205,6 @@ public class Game {
                 case "field_info":
                     FieldInfo(params);
                     break;
-
                 default:
                     throw new IllegalStateException("Unexpected value: " + params[0]);
             }
@@ -240,7 +239,6 @@ public class Game {
                         break;
                     default:
                         c = new Code();
-                        break;
                 }
                 fields.put(params[1], new Laboratory(c,id));
                 break;
@@ -268,7 +266,6 @@ public class Game {
                         break;
                     default:
                         c = new Code();
-                        break;
                 }
                 fields.put(params[1], new BearLaboratory(c, id));
                 break;
@@ -339,7 +336,6 @@ public class Game {
                 break;
             default:
             c = new Code();
-            break;
         }
         doctors.get(params[1]).LearnCode(c);
     }
@@ -442,6 +438,7 @@ public class Game {
                 break;
             case "5":
                 a = new BearAgens();
+                break;
             default:
                 a = new Protection(0);
         }
@@ -469,7 +466,6 @@ public class Game {
                 break;
             default:
                 c = new Code();
-                break;
         }
 
         doctors.get(params[1]).Attack(doctors.get(params[2]), c);
@@ -592,7 +588,6 @@ public class Game {
                 break;
             default:
                 c = new Code();
-                break;
         }
         doctors.get(params[1]).AgensOnSelf(c);
     }
