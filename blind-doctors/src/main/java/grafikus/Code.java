@@ -41,21 +41,26 @@ public class Code {
                 Dance d = new Dance(duration);
                 this.agens = d;
                 this.cost = new Material(cost);
+                break;
             case 2:
                 this.name = "forget";
                 Forget f = new Forget(duration);
                 this.agens = f;
                 this.cost = new Material(cost);
+                break;
             case 3:
                 this.name = "stun";
                 Stun s = new Stun(duration);
                 this.agens = s;
                 this.cost = new Material(cost);
+                break;
             case 4:
                 this.name = "protection";
                 Protection p = new Protection(duration);
                 this.agens = p;
                 this.cost = new Material(cost);
+                break;
+            default:
         }
     }
 
