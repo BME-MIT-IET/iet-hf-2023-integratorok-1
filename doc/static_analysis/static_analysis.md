@@ -5,17 +5,17 @@ Az általunk választott megoldás a statikus analízishez a SonarCloud, amelyet
 - SonarCloud API-jához való hozzáférést biztosító Tokenek megadása
 <br>
 ![](tokenek.PNG)
-<br>
+
 
 - Git események megadása, amelyekre automatikusan lefut az analízis
 <br>
 ![](gitEsemenyek.PNG)
-<br>
+
 
 - Futtatás parancs leírása
 <br>
 ![](parancs.PNG)
-<br>
+
 
 A _.yml_ konfigurációs fájl létrehozásán kívül a projektünket leíró _pom.xml_ fájlt is módosítottuk. A tulajdonságokhoz hozzáadtunk két új mezőt, amelyekkel megadjuk a SonarCloud URL-jét, valamint a szervezet nevét. Ezek az alábbi képen láthatóak.
 <br>
