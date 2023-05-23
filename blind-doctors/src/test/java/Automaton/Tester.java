@@ -1,3 +1,5 @@
+package Automaton;
+
 import com.athaydes.automaton.*;
 import grafikus.Main;
 import org.junit.*;
