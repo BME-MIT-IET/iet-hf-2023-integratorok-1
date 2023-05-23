@@ -6,6 +6,7 @@ Az általunk választott megoldás a statikus analízishez a SonarCloud, amelyet
 <br>
 ![](tokenek.PNG)
 <br>
+
 - Git események megadása, amelyekre automatikusan lefut az analízis
 <br>
 ![](gitEsemenyek.PNG)
