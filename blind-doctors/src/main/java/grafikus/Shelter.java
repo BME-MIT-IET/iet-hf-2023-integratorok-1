@@ -16,8 +16,6 @@ public class Shelter extends Field{
      * explicit konstruktor
      * @param e - felszerelés
      */
-
-
     public Shelter(int e, String id){
         super(id);
         eq = e;
