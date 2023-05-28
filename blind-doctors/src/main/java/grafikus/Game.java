@@ -79,7 +79,9 @@ public class Game {
      * @param b medve
      */
     public static void TurnIntoBear(Doctor who, Bear b){
-        doctorsList.set(Integer.parseInt(who.GetID()), b);
+        if(doctorsList.size() > 0){
+            doctorsList.set(Integer.parseInt(who.GetID()), b);
+        }
     }
 
     /**
