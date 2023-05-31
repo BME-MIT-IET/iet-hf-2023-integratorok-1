@@ -31,6 +31,7 @@ public class BearAgens extends Agens{
     public void HandleEffect(Doctor on) {
         Bear b = new Bear(on, on.GetID());
         on.GetField().GetDoctors().set(on.GetField().GetDoctors().indexOf(on), b);
+        on = b;
         Game.TurnIntoBear(on, b);
     }
 
