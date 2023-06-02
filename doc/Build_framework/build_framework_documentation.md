@@ -27,6 +27,6 @@ A továbbiakban a fent említett _pom.xml_ és a _maven.yml_ fájlokban végezt�
 
 ![](pics/gitevent.PNG)
 
-- Futtatás parancs megadása a pom.xml fájl elérési utjával
+- Futtatás parancs megadása a _pom.xml_ fájl elérési útjával
 
 ![](pics/run.PNG)
